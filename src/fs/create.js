@@ -17,7 +17,7 @@ export const create = async () => {
       path.join(__dirname, 'files', 'fresh.txt'),
       'I am fresh and young',
       (err) => {
-        if (err) throw console.log('FS operation failed');
+        if (err) throw console.error('FS operation failed');
         console.log('Create')
       }
     );
