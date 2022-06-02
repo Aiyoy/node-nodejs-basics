@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs';
+import fsProm from 'fs/promises';
 import path from 'path';
 
 export const create = async () => {
@@ -13,7 +14,7 @@ export const create = async () => {
       return
     }
   
-    fs.writeFile(
+    fsProm.writeFile(
       path.join(__dirname, 'files', 'fresh.txt'),
       'I am fresh and young',
       (err) => {
