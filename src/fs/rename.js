@@ -18,12 +18,11 @@ export const rename = async () => {
           console.error('FS operation failed');
           return;
         } else {
-          fs.rename(
+          await fsProm.rename(
             path.join(__dirname, 'files', 'wrongFilename.txt'),
             path.join(__dirname, 'files', 'properFilename.md'),
             err => {
-                if (err) throw console.error('FS operation failed');;
-                console.log('File rename');
+                if (err) throw console.error('FS operation failed');
             }
         );
         }
