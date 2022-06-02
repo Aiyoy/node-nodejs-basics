@@ -15,7 +15,7 @@ export const remove = async () => {
     } else {
       await fsProm.unlink(path.join(__dirname, 'files', 'fileToRemove.txt'), err => {
         if (err) throw console.error('FS operation failed');
-    })
+      })
     }
   });
 };
