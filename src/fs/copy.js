@@ -1,4 +1,4 @@
-// node src/fs/copy.js
+// npm run fs:copy
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

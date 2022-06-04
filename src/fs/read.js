@@ -1,4 +1,4 @@
-// node src/fs/read.js
+// npm run fs:read
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

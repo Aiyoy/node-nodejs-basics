@@ -1,4 +1,4 @@
-// node src/fs/rename.js
+// npm run fs:rename
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

@@ -1,4 +1,4 @@
-// node src/streams/read.js
+// npm run streams:read
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

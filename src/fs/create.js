@@ -1,4 +1,4 @@
-// node src/fs/create.js 
+// npm run fs:create
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

@@ -1,4 +1,4 @@
-// node src/zip/compress.js
+// npm run zip:compress
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

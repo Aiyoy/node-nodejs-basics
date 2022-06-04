@@ -1,4 +1,4 @@
-// node src/streams/transform.js
+// npm run streams:transform
 
 import { Transform } from 'stream';
 

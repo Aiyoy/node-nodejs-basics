@@ -1,4 +1,4 @@
-// node src/streams/write.js
+// npm run streams:write
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

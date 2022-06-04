@@ -1,4 +1,4 @@
-// node src/hash/calcHash.js
+// npm run zip:decompress
 
 import { fileURLToPath } from 'url';
 import fs from 'fs';

@@ -1,4 +1,4 @@
-// node src/cli/args.js --propName value --prop2Name value2
+// npm run cli:args
 
 export const parseArgs = () => {
   const args = process.argv;

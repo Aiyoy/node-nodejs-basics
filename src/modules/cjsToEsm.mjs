@@ -1,4 +1,4 @@
-// для удобства проверки этого задания можно запустить node src/modules/index.js
+// npm run modules:cjsToEsm
 // если вдруг версия вашего node ниже 16.15 и начнут выпадать ошибки, связанные с json,
 // можно запустить используюя флаг node --experimental-json-modules src/modules/index.js
 

@@ -1,4 +1,4 @@
-// node src/fs/list.js
+// npm run fs:list
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -15,7 +15,9 @@ export const list = async () => {
       if (error) throw error;
       const files = await fsProm.readdir(path.join(__dirname, 'files'));
       files.forEach(async (file) => {
-        console.log(file);
+        const filePath = path.join(__dirname, `files/${file}`);
+        const fileInf = path.parse(filePath);
+        console.log(fileInf.name);
       })
     } catch (err) {
       console.log('FS operation failed');

@@ -1,4 +1,4 @@
-// node src/wt/main.js
+// npm run wt:main
 
 import { Worker } from 'worker_threads';
 import { fileURLToPath } from 'url';
