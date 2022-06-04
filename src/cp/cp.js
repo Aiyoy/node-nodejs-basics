@@ -1,3 +1,5 @@
+// node src/cp/cp.js 1 2 3 4 5
+
 import child_process from 'child_process';
 import { fileURLToPath } from 'url';
 import path from 'path';

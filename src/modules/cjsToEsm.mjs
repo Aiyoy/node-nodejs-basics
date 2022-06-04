@@ -1,6 +1,6 @@
-// для удобства проверки этого задания можно запустить node index.js
+// для удобства проверки этого задания можно запустить node src/modules/index.js
 // если вдруг версия вашего node ниже 16.15 и начнут выпадать ошибки, связанные с json,
-// можно запустить используюя флаг node --experimental-json-modules index.js
+// можно запустить используюя флаг node --experimental-json-modules src/modules/index.js
 
 import { fileURLToPath } from 'url';
 import path from 'path';

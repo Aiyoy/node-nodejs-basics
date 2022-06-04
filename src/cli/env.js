@@ -1,3 +1,6 @@
+// RSS_name1=value1  RSS_name2=value2 node src/cli/env.js
+// запускается в Git Bash
+
 export const parseEnv = () => {
   const variables = process.env;
   const keys = Object.keys(variables).filter((key) => {

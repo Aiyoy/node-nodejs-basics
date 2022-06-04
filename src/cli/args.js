@@ -1,3 +1,5 @@
+// node src/cli/args.js --propName value --prop2Name value2
+
 export const parseArgs = () => {
   const args = process.argv;
   args.forEach((arg, index) => {

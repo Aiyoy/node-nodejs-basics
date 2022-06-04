@@ -1,3 +1,5 @@
+// node src/fs/delete.js
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs';
@@ -9,13 +11,17 @@ export const remove = async () => {
   const __dirname = dirname(__filename);
 
   fs.access(path.join(__dirname, 'files', 'fileToRemove.txt'), async (error) => {
-    if (error) {
-      console.error('FS operation failed');
-      return;
-    } else {
+    try {
+      if (error) throw error;
       await fsProm.unlink(path.join(__dirname, 'files', 'fileToRemove.txt'), err => {
-        if (err) throw console.error('FS operation failed');
+        try {
+          if (error) throw error;
+        } catch (err) {
+          console.log('FS operation failed');
+        }
       })
+    } catch (err) {
+      console.log('FS operation failed');
     }
   });
 };

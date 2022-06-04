@@ -1,3 +1,5 @@
+// node src/fs/rename.js
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs';
@@ -9,24 +11,28 @@ export const rename = async () => {
   const __dirname = dirname(__filename);
 
   fs.access(path.join(__dirname, 'files', 'wrongFilename.txt'), async (error) => {
-    if (error) {
-      console.error('FS operation failed');
-      return;
-    } else {
+    try {
+      if (error) throw error;
       fs.access(path.join(__dirname, 'files', 'properFilename.md'), async (error) => {
-        if (!error) {
-          console.error('FS operation failed');
-          return;
-        } else {
+        try {
+          if (!error) throw error;
           await fsProm.rename(
             path.join(__dirname, 'files', 'wrongFilename.txt'),
             path.join(__dirname, 'files', 'properFilename.md'),
             err => {
-                if (err) throw console.error('FS operation failed');
+                try {
+                  if (error) throw error;
+                } catch (err) {
+                  console.log('FS operation failed');
+                }
             }
-        );
+          );
+        } catch (err) {
+          console.log('FS operation failed');
         }
       });
+    } catch (err) {
+      console.log('FS operation failed');
     }
   });
 };

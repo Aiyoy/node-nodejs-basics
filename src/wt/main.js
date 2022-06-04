@@ -1,3 +1,5 @@
+// node src/wt/main.js
+
 import { Worker } from 'worker_threads';
 import { fileURLToPath } from 'url';
 import path from 'path';
