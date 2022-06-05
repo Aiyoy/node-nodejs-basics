@@ -17,11 +17,11 @@ export const remove = async () => {
         try {
           if (error) throw error;
         } catch (err) {
-          console.log('FS operation failed');
+          console.log(new Error('FS operation failed'));
         }
       })
     } catch (err) {
-      console.log('FS operation failed');
+      console.log(new Error('FS operation failed'));
     }
   });
 };

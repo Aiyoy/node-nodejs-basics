@@ -15,7 +15,7 @@ export const read = async () => {
         const text = data.toString();
         console.log(text);
     } catch (err) {
-      console.log('FS operation failed');
+      console.log(new Error('FS operation failed'));
     }
   });
 };

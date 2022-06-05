@@ -17,10 +17,10 @@ export const list = async () => {
       files.forEach(async (file) => {
         const filePath = path.join(__dirname, `files/${file}`);
         const fileInf = path.parse(filePath);
-        console.log(fileInf.name);
+        console.log(new Error('FS operation failed'));
       })
     } catch (err) {
-      console.log('FS operation failed');
+      console.log(new Error('FS operation failed'));
     }
   });
 };

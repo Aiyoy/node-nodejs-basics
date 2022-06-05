@@ -21,12 +21,12 @@ export const create = async () => {
           try {
             if (err) throw err;
           } catch (error) {
-            console.log('FS operation failed');
+            console.log(new Error('FS operation failed'));
           }
         }
       );
     } catch (err) {
-      console.log('FS operation failed');
+      console.log(new Error('FS operation failed'));
     }
   })
 };

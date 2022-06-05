@@ -20,7 +20,7 @@ export const copy = async () => {
             try {
               if (error) throw error;
             } catch (err) {
-              console.log('FS operation failed');
+              console.log(new Error('FS operation failed'));
             }            
           });
           const files = await fsProm.readdir(path.join(__dirname, 'files'));
@@ -28,11 +28,11 @@ export const copy = async () => {
             await fsProm.copyFile(path.join(__dirname, 'files', file), path.join(__dirname, 'files_copy', file));
           })
         } catch (err) {
-          console.log('FS operation failed');
+          console.log(new Error('FS operation failed'));
         }
       });
     } catch (err) {
-      console.log('FS operation failed');
+      console.log(new Error('FS operation failed'));
     }
   });
 };
