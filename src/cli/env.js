@@ -1,3 +1,14 @@
+// RSS_name1=value1  RSS_name2=value2 node src/cli/env.js
+// запускается в Git Bash
+
 export const parseEnv = () => {
-    // Write your code here 
+  const variables = process.env;
+  const keys = Object.keys(variables).filter((key) => {
+    if (!key.indexOf('RSS_')) return key;
+  });
+  keys.forEach((key) => {
+    console.log(`${key}=${variables[key]}`);
+  });
 };
+
+parseEnv();
